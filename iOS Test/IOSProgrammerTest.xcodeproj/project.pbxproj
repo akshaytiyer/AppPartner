@@ -13,6 +13,7 @@
 		4434B5C11A3FBB7100687081 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4434B5C01A3FBB7100687081 /* Images.xcassets */; };
 		4434B5C41A3FBB7100687081 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4434B5C21A3FBB7100687081 /* LaunchScreen.xib */; };
 		4434B5D01A3FBB7100687081 /* IOSProgrammerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434B5CF1A3FBB7100687081 /* IOSProgrammerTestTests.m */; };
+		5EC0CAE31D170B130068D714 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC0CAE21D170B130068D714 /* Default-568h@2x.png */; };
 		DC932C181A40A50A000035B7 /* AnimationSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C071A40A50A000035B7 /* AnimationSectionViewController.m */; };
 		DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC932C081A40A50A000035B7 /* AnimationSectionViewController.xib */; };
 		DC932C1A1A40A50A000035B7 /* LoginSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932C0B1A40A50A000035B7 /* LoginSectionViewController.m */; };
@@ -49,6 +50,7 @@
 		4434B5C91A3FBB7100687081 /* IOSProgrammerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProgrammerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4434B5CE1A3FBB7100687081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4434B5CF1A3FBB7100687081 /* IOSProgrammerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSProgrammerTestTests.m; sourceTree = "<group>"; };
+		5EC0CAE21D170B130068D714 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DC932C061A40A50A000035B7 /* AnimationSectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationSectionViewController.h; sourceTree = "<group>"; };
 		DC932C071A40A50A000035B7 /* AnimationSectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationSectionViewController.m; sourceTree = "<group>"; };
 		DC932C081A40A50A000035B7 /* AnimationSectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationSectionViewController.xib; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		4434B5A71A3FBB7100687081 = {
 			isa = PBXGroup;
 			children = (
+				5EC0CAE21D170B130068D714 /* Default-568h@2x.png */,
 				4434B5B21A3FBB7100687081 /* IOSProgrammerTest */,
 				4434B5CC1A3FBB7100687081 /* IOSProgrammerTestTests */,
 				4434B5B11A3FBB7100687081 /* Products */,
@@ -245,7 +248,7 @@
 		4434B5A81A3FBB7100687081 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = AppPartner;
 				TargetAttributes = {
 					4434B5AF1A3FBB7100687081 = {
@@ -283,6 +286,7 @@
 			files = (
 				4434B5C41A3FBB7100687081 /* LaunchScreen.xib in Resources */,
 				DC932C211A40A50A000035B7 /* ChatSectionViewController.xib in Resources */,
+				5EC0CAE31D170B130068D714 /* Default-568h@2x.png in Resources */,
 				DC932C191A40A50A000035B7 /* AnimationSectionViewController.xib in Resources */,
 				DC932C1F1A40A50A000035B7 /* ChatCell.xib in Resources */,
 				4434B5C11A3FBB7100687081 /* Images.xcassets in Resources */,
@@ -367,6 +371,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -429,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IOSProgrammerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apppartner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -439,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IOSProgrammerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apppartner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -457,6 +464,7 @@
 				);
 				INFOPLIST_FILE = IOSProgrammerTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apppartner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSProgrammerTest.app/IOSProgrammerTest";
 			};
@@ -472,6 +480,7 @@
 				);
 				INFOPLIST_FILE = IOSProgrammerTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.apppartner.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IOSProgrammerTest.app/IOSProgrammerTest";
 			};

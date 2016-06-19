@@ -84,7 +84,6 @@
     ChatData *chatData = [self.loadedChatData objectAtIndex:[indexPath row]];
 
     [cell loadWithData:chatData];
-
     return cell;
 }
 
