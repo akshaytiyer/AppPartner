@@ -25,7 +25,7 @@
                         <action selector="backAction:" destination="-1" eventType="touchUpInside" id="1cb-Mh-taT"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udg-gG-eTY">
                     <rect key="frame" x="0.0" y="52" width="320" height="516"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -35,6 +35,12 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="udg-gG-eTY" secondAttribute="bottom" id="Jwn-R0-ggr"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="52" id="LhK-9T-XgW"/>
+                <constraint firstItem="udg-gG-eTY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O1n-hp-BMj"/>
+                <constraint firstAttribute="trailing" secondItem="udg-gG-eTY" secondAttribute="trailing" id="OcN-Us-XNg"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
