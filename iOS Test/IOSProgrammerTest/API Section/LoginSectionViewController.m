@@ -12,7 +12,9 @@
 @interface LoginSectionViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
-
+@property (nonatomic) NSTimeInterval executionTime;
+@property (nonatomic) NSDate* methodStart;
+@property (nonatomic) NSDate* methodFinish;
 @end
 
 @implementation LoginSectionViewController
@@ -41,13 +43,33 @@
     [req setValue:[NSString stringWithFormat:@"%lu", (unsigned long)requestData.length] forHTTPHeaderField:@"Content-Length"];
     [req setHTTPBody:requestData];
     
-    //NSData *outData = [NSURLConnection sendSynchronousRequest:req returningResponse:&response error:&error];
+    self.methodStart = [NSDate date];
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        NSString *strData = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",strData);
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+        
+        UIAlertController * alert=   [UIAlertController
+                                      alertControllerWithTitle:[dictionary valueForKey:@"code"]
+                                      message:[NSString stringWithFormat:@"%@\n\nAPI call took %f milliseconds",[dictionary valueForKey:@"message"], self.executionTime]
+                                      preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction * ok = [UIAlertAction actionWithTitle:@"Ok" style: UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }];
+        
+        UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"Cancel" style: UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+           [alert dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alert addAction:ok];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }];
+    self.methodFinish = [NSDate date];
+    self.executionTime = [self.methodFinish timeIntervalSinceDate:self.methodStart];
+    //NSLog(@"executionTime = %f", executionTime);
     //NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:outData options:0 error:NULL];
-    
+
 }
 
 - (IBAction)backAction:(id)sender
