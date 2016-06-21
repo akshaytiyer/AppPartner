@@ -21,10 +21,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
 
+
+    
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
 
     self.navController = [[UINavigationController alloc] initWithRootViewController:mainMenuViewController];
-    [self.navController setNavigationBarHidden:YES];
+    //[self.navController setNavigationBarHidden:YES];
+    
+    UINavigationBar *bar = [self.navController navigationBar];
+    [bar setBarTintColor:[UIColor colorWithRed:0.173 green:0.271 blue:0.337 alpha:0.9]];
+    [bar setTintColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
+    [bar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Machinato-Light" size:20], NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.window.rootViewController = self.navController;
 
     return YES;

@@ -20,7 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.navigationItem.title = @"Coding Tasks";
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background Animation"]];
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -20,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Coding Tasks";
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -21,7 +21,9 @@
 
 - (void)viewDidLoad
 {
-  
+    [super viewDidLoad];
+    self.navigationItem.title = @"Login";
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background Login"]];
 }
 
 - (void)didReceiveMemoryWarning
