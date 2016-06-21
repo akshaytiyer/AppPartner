@@ -17,15 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDP-zC-6Xi">
-                    <rect key="frame" x="8" y="14" width="73" height="49"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="J25-hm-NYq"/>
-                    </connections>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Login" translatesAutoresizingMaskIntoConstraints="NO" id="ikC-DW-ucQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KtA-ja-Utn">
                     <rect key="frame" x="23" y="78" width="275" height="30"/>
                     <attributedString key="attributedText"/>
@@ -46,7 +40,16 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ikC-DW-ucQ" secondAttribute="trailing" id="1cW-Jg-U3H"/>
+                <constraint firstAttribute="bottom" secondItem="ikC-DW-ucQ" secondAttribute="bottom" id="6LG-ai-rrQ"/>
+                <constraint firstItem="ikC-DW-ucQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ddm-KC-ja4"/>
+                <constraint firstItem="ikC-DW-ucQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o0u-kq-ESG"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background Login" width="320" height="568"/>
+    </resources>
 </document>

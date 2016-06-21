@@ -16,15 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-IL-RFt">
-                    <rect key="frame" x="23" y="16" width="58" height="30"/>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="smt-Qj-UGc"/>
-                    </connections>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Animation" translatesAutoresizingMaskIntoConstraints="NO" id="ycy-MG-iuC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFq-Jm-TDz">
                     <rect key="frame" x="144" y="406" width="46" height="30"/>
                     <state key="normal" title="Button"/>
@@ -37,10 +31,17 @@
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ycy-MG-iuC" secondAttribute="bottom" id="5MA-q8-ZqI"/>
+                <constraint firstItem="ycy-MG-iuC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nfn-AU-L7r"/>
+                <constraint firstAttribute="trailing" secondItem="ycy-MG-iuC" secondAttribute="trailing" id="PkV-Ct-uvT"/>
+                <constraint firstItem="ycy-MG-iuC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o2B-ab-Ym3"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
         <image name="App Partner Logo" width="140" height="132"/>
+        <image name="Background Animation" width="320" height="568"/>
     </resources>
 </document>
