@@ -9,7 +9,7 @@
 #import "LoginSectionViewController.h"
 #import "MainMenuViewController.h"
 
-@interface LoginSectionViewController ()
+@interface LoginSectionViewController () <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *username;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (nonatomic) NSTimeInterval executionTime;
@@ -24,6 +24,8 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Login";
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background Login"]];
+    self.username.delegate = self;
+    self.password.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,11 +76,18 @@
 
 }
 
+-(BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (IBAction)backAction:(id)sender
 {
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
     [self.navigationController pushViewController:mainMenuViewController animated:YES];
 }
+
 
 
 
