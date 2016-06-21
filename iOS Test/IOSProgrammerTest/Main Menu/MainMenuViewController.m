@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    //Set the Title for the Main Menu Page as "Coding Taska"
+    //Set the Title for the Main Menu Page as "Coding Tasks"
     self.navigationItem.title = @"Coding Tasks";
 }
 
