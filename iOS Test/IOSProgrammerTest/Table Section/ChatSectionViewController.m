@@ -25,6 +25,7 @@
     self.navigationItem.title = @"Chat";
     self.loadedChatData = [[NSMutableArray alloc] init];
     [self loadJSONData];
+
 }
 
 - (void)loadJSONData

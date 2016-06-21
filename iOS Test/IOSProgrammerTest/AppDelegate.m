@@ -17,11 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
-
-
     
     MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuViewController" bundle:nil];
 
@@ -32,6 +30,13 @@
     [bar setBarTintColor:[UIColor colorWithRed:0.173 green:0.271 blue:0.337 alpha:0.9]];
     [bar setTintColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
     [bar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Machinato-Light" size:20], NSForegroundColorAttributeName : [UIColor whiteColor]}];
+
+    
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@" "
+                                                                 style:UIBarButtonItemStyleDone
+                                                                target:self
+                                                                action:nil];
+    self.navController.navigationBar.topItem.backBarButtonItem=backItem;
     self.window.rootViewController = self.navController;
 
     return YES;
