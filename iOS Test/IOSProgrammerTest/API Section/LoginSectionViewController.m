@@ -28,11 +28,7 @@
     self.password.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (IBAction)loginButton:(id)sender {
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://dev.apppartner.com/AppPartnerProgrammerTest/scripts/login.php"]
                             cachePolicy:NSURLRequestReloadIgnoringCacheData
@@ -82,12 +78,11 @@
     return YES;
 }
 
-- (IBAction)backAction:(id)sender
+- (void)didReceiveMemoryWarning
 {
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    [self.navigationController pushViewController:mainMenuViewController animated:YES];
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-
 
 
 

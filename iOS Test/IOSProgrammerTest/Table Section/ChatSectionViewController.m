@@ -57,17 +57,7 @@
 
     [self.tableView reloadData];
 }
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-- (IBAction)backAction:(id)sender
-{
-    MainMenuViewController *mainMenuViewController = [[MainMenuViewController alloc] init];
-    [self.navigationController pushViewController:mainMenuViewController animated:YES];
-}
 
 #pragma mark - UITableViewDataSource
 
@@ -101,4 +91,11 @@
 {
     return TABLE_CELL_HEIGHT;
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end
