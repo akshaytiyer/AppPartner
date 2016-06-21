@@ -5,49 +5,55 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="ChatCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I5d-iD-Ox0">
-                        <rect key="frame" x="5" y="5" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="BV2-Jh-gaX"/>
-                            <constraint firstAttribute="width" constant="50" id="pRr-IK-WcK"/>
-                        </constraints>
-                    </imageView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJv-xE-TwP">
-                        <rect key="frame" x="54" y="20" width="266" height="40"/>
+                        <rect key="frame" x="71" y="26" width="249" height="73.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YO-MZ-XPK">
-                        <rect key="frame" x="58" y="0.0" width="262" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <rect key="frame" x="73" y="4.5" width="241" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="241" id="oeI-OV-6dn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="18"/>
+                        <color key="textColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I5d-iD-Ox0">
+                        <rect key="frame" x="3" y="16" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="Bj7-K1-X9l"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="I5d-iD-Ox0" secondAttribute="bottom" constant="4.5" id="3Gj-Ih-7Pm"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="KJv-xE-TwP" secondAttribute="bottom" constant="-8" id="3M1-2D-Lhh"/>
-                    <constraint firstItem="KJv-xE-TwP" firstAttribute="leading" secondItem="0YO-MZ-XPK" secondAttribute="leading" constant="-4" id="CE7-ee-PFS"/>
-                    <constraint firstAttribute="bottom" secondItem="0YO-MZ-XPK" secondAttribute="bottom" constant="40" id="DfZ-9r-iuh"/>
-                    <constraint firstAttribute="trailing" secondItem="0YO-MZ-XPK" secondAttribute="trailing" id="GcX-GZ-GnM"/>
-                    <constraint firstItem="0YO-MZ-XPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ovf-32-oef"/>
-                    <constraint firstItem="KJv-xE-TwP" firstAttribute="top" secondItem="0YO-MZ-XPK" secondAttribute="bottom" id="R9K-CQ-i7J"/>
-                    <constraint firstItem="I5d-iD-Ox0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Soq-41-pGn"/>
-                    <constraint firstItem="0YO-MZ-XPK" firstAttribute="leading" secondItem="I5d-iD-Ox0" secondAttribute="trailing" constant="3" id="fqn-QV-Zp6"/>
-                    <constraint firstItem="I5d-iD-Ox0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="jNM-9p-Ffg"/>
-                    <constraint firstItem="KJv-xE-TwP" firstAttribute="trailing" secondItem="0YO-MZ-XPK" secondAttribute="trailing" id="m93-nl-fKz"/>
-                    <constraint firstItem="0YO-MZ-XPK" firstAttribute="top" secondItem="I5d-iD-Ox0" secondAttribute="top" constant="-5" id="zSA-9V-7aq"/>
+                    <constraint firstItem="KJv-xE-TwP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="3iF-jo-zbI"/>
+                    <constraint firstItem="KJv-xE-TwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="63" id="Cih-J9-a60"/>
+                    <constraint firstItem="0YO-MZ-XPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4.5" id="FkC-Rt-TtG"/>
+                    <constraint firstItem="0YO-MZ-XPK" firstAttribute="leading" secondItem="I5d-iD-Ox0" secondAttribute="trailing" constant="2" id="MH7-FE-PaF"/>
+                    <constraint firstAttribute="bottom" secondItem="KJv-xE-TwP" secondAttribute="bottom" id="THP-eo-Dh2"/>
+                    <constraint firstAttribute="trailing" secondItem="KJv-xE-TwP" secondAttribute="trailing" id="TfG-1F-N7j"/>
+                    <constraint firstAttribute="bottom" secondItem="I5d-iD-Ox0" secondAttribute="bottom" constant="15.5" id="bkC-5n-ej6"/>
+                    <constraint firstItem="I5d-iD-Ox0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="eIN-oh-Vha"/>
+                    <constraint firstItem="I5d-iD-Ox0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="u6t-uv-nsf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -55,7 +61,7 @@
                 <outlet property="messageTextView" destination="KJv-xE-TwP" id="I9e-mI-vLC"/>
                 <outlet property="usernameLabel" destination="0YO-MZ-XPK" id="5VF-9p-BRx"/>
             </connections>
-            <point key="canvasLocation" x="272" y="84"/>
+            <point key="canvasLocation" x="272" y="104"/>
         </tableViewCell>
     </objects>
 </document>

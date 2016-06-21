@@ -36,8 +36,8 @@
                             cachePolicy:NSURLRequestReloadIgnoringCacheData
                         timeoutInterval:90];
     NSMutableString *postrequest = [NSMutableString string];
-    [postrequest appendFormat:@"&%@=%@", @"username", @"SuperBoise"];
-    [postrequest appendFormat:@"&%@=%@", @"password", @"qwerty"];
+    [postrequest appendFormat:@"&%@=%@", @"username", self.username.text];
+    [postrequest appendFormat:@"&%@=%@", @"password", self.password.text];
     
     NSData *requestData = [postrequest dataUsingEncoding:NSUTF8StringEncoding];
     [req setHTTPMethod:@"POST"];
@@ -47,6 +47,8 @@
     
     self.methodStart = [NSDate date];
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        self.methodFinish = [NSDate date];
+        self.executionTime = [self.methodFinish timeIntervalSinceDate:self.methodStart];
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
         
         UIAlertController * alert=   [UIAlertController
@@ -67,8 +69,6 @@
         
         [self presentViewController:alert animated:YES completion:nil];
     }];
-    self.methodFinish = [NSDate date];
-    self.executionTime = [self.methodFinish timeIntervalSinceDate:self.methodStart];
     //NSLog(@"executionTime = %f", executionTime);
     //NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:outData options:0 error:NULL];
 

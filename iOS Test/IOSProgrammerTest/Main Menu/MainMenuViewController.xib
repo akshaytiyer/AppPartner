@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Jelloween - Machinato.ttf">
@@ -25,19 +26,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Main Menu" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-tY-0gP">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-2I-g1i">
-                    <rect key="frame" x="38" y="235" width="245" height="60"/>
-                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
-                    <state key="normal" title="Location    " backgroundImage="Menu Login Button">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-gC-vJF">
-                    <rect key="frame" x="37" y="300" width="245" height="60"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-gC-vJF">
+                    <rect key="frame" x="38" y="322" width="245" height="56"/>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
                     <state key="normal" title="        Animation Test" backgroundImage="Menu Animation Button">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,8 +37,8 @@
                         <action selector="animationSectionAction:" destination="-1" eventType="touchUpInside" id="x0r-AK-Kgg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIv-WM-yxj">
-                    <rect key="frame" x="38" y="170" width="245" height="60"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIv-WM-yxj">
+                    <rect key="frame" x="38" y="190" width="245" height="56"/>
                     <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
                     <state key="normal" title="Chat            " backgroundImage="Menu Chat Button">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,13 +48,41 @@
                         <action selector="tableSectionAction:" destination="-1" eventType="touchUpInside" id="3Sa-RA-4sY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-2I-g1i">
+                    <rect key="frame" x="38" y="256" width="245" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="267-8o-EwT"/>
+                        <constraint firstAttribute="width" secondItem="dyY-2I-g1i" secondAttribute="height" multiplier="35:8" id="cTL-o3-Dlx"/>
+                        <constraint firstAttribute="width" constant="245" id="t1W-YP-II7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="22"/>
+                    <state key="normal" title="Location    " backgroundImage="Menu Login Button">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="apiSectionAction:" destination="-1" eventType="touchUpInside" id="E1z-6c-yAP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="TMn-tY-0gP" secondAttribute="trailing" id="Imx-sD-FtF"/>
-                <constraint firstAttribute="bottom" secondItem="TMn-tY-0gP" secondAttribute="bottom" id="KDx-CP-Pch"/>
-                <constraint firstItem="TMn-tY-0gP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ldp-PC-4pV"/>
-                <constraint firstItem="TMn-tY-0gP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lwE-oc-DbV"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3QC-bE-W4l"/>
+                <constraint firstAttribute="trailing" secondItem="TMn-tY-0gP" secondAttribute="trailing" id="AGZ-eb-j75"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JNQ-g3-7lE"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="height" secondItem="dyY-2I-g1i" secondAttribute="height" id="Ms4-zv-PEf"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="width" secondItem="dyY-2I-g1i" secondAttribute="width" id="N04-iC-ddd"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="top" secondItem="dyY-2I-g1i" secondAttribute="bottom" constant="10" id="Ouo-tO-E7q"/>
+                <constraint firstItem="TMn-tY-0gP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TuU-C0-eVu"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="width" secondItem="dyY-2I-g1i" secondAttribute="height" multiplier="35:8" id="Z4d-Cy-OSy"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="width" secondItem="dyY-2I-g1i" secondAttribute="height" multiplier="35:8" id="eNn-a5-JjD"/>
+                <constraint firstItem="dyY-2I-g1i" firstAttribute="top" secondItem="hIv-WM-yxj" secondAttribute="bottom" constant="10" id="fnL-Qz-2DL"/>
+                <constraint firstAttribute="bottom" secondItem="TMn-tY-0gP" secondAttribute="bottom" id="hEe-mB-VtQ"/>
+                <constraint firstItem="hIv-WM-yxj" firstAttribute="centerX" secondItem="dyY-2I-g1i" secondAttribute="centerX" id="ikk-La-TrM"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="centerX" secondItem="dyY-2I-g1i" secondAttribute="centerX" id="pcO-q7-P4g"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="height" secondItem="dyY-2I-g1i" secondAttribute="height" id="sHx-iJ-PVV"/>
+                <constraint firstItem="u8J-gC-vJF" firstAttribute="width" secondItem="dyY-2I-g1i" secondAttribute="width" id="uKh-DD-yqT"/>
+                <constraint firstItem="TMn-tY-0gP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wEK-yh-7Gc"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
