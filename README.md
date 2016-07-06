@@ -7,5 +7,4 @@ The following application was developed using Objective-C. It was a programming 
 
 -An Animation Test which flips an Image View by 360 degrees and allows it to be dragged around the screen.
 
-The Wireframe explaining the entire process is as follows.
 
